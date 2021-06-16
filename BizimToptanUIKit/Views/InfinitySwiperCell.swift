@@ -6,7 +6,20 @@
 //
 
 import UIKit
+import Kingfisher
 
-class InfinitySwiperCell {
+class InfinitySwiperCell: UICollectionViewCell {
+    @IBOutlet weak var image: UIImageView!
+    
+    var imageUrl: String! {
+        didSet {
+            self.updateUI()
+        }
+    }
+    
+    private func updateUI() {
+        let url = URL(string: imageUrl)
+        image.kf.setImage(with: url)
+    }
     
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD15B68B2679ED860063D604 /* ProductSwiperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD15B6892679ED860063D604 /* ProductSwiperTableViewCell.swift */; };
+		BD15B68C2679ED860063D604 /* ProductSwiperTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD15B68A2679ED860063D604 /* ProductSwiperTableViewCell.xib */; };
+		BD15B68F2679FF280063D604 /* ProductSwiperCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD15B68D2679FF280063D604 /* ProductSwiperCollectionViewCell.swift */; };
+		BD15B6902679FF280063D604 /* ProductSwiperCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD15B68E2679FF280063D604 /* ProductSwiperCollectionViewCell.xib */; };
 		BD682CB326715E0D007891DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD682CB226715E0D007891DD /* AppDelegate.swift */; };
 		BD682CB526715E0D007891DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD682CB426715E0D007891DD /* SceneDelegate.swift */; };
 		BD682CB726715E0D007891DD /* MainPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD682CB626715E0D007891DD /* MainPageTableViewController.swift */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD15B6892679ED860063D604 /* ProductSwiperTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSwiperTableViewCell.swift; sourceTree = "<group>"; };
+		BD15B68A2679ED860063D604 /* ProductSwiperTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductSwiperTableViewCell.xib; sourceTree = "<group>"; };
+		BD15B68D2679FF280063D604 /* ProductSwiperCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSwiperCollectionViewCell.swift; sourceTree = "<group>"; };
+		BD15B68E2679FF280063D604 /* ProductSwiperCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductSwiperCollectionViewCell.xib; sourceTree = "<group>"; };
 		BD682CAF26715E0D007891DD /* BizimToptanUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BizimToptanUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD682CB226715E0D007891DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD682CB426715E0D007891DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +133,10 @@
 			children = (
 				BD68A36E2672A76C0005FE18 /* BannerSwiperCell.swift */,
 				BDCF17792677DF6F002C7D07 /* InfinitySwiperCell.swift */,
+				BD15B6892679ED860063D604 /* ProductSwiperTableViewCell.swift */,
+				BD15B68A2679ED860063D604 /* ProductSwiperTableViewCell.xib */,
+				BD15B68D2679FF280063D604 /* ProductSwiperCollectionViewCell.swift */,
+				BD15B68E2679FF280063D604 /* ProductSwiperCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,7 +204,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD15B6902679FF280063D604 /* ProductSwiperCollectionViewCell.xib in Resources */,
 				BD682CBF26715E0E007891DD /* LaunchScreen.storyboard in Resources */,
+				BD15B68C2679ED860063D604 /* ProductSwiperTableViewCell.xib in Resources */,
 				BD682CBC26715E0E007891DD /* Assets.xcassets in Resources */,
 				BD682CBA26715E0D007891DD /* Main.storyboard in Resources */,
 			);
@@ -207,6 +221,8 @@
 			files = (
 				BD68A36F2672A76C0005FE18 /* BannerSwiperCell.swift in Sources */,
 				BD682CB726715E0D007891DD /* MainPageTableViewController.swift in Sources */,
+				BD15B68B2679ED860063D604 /* ProductSwiperTableViewCell.swift in Sources */,
+				BD15B68F2679FF280063D604 /* ProductSwiperCollectionViewCell.swift in Sources */,
 				BD68A36C2672A0AF0005FE18 /* BannerSwiperService.swift in Sources */,
 				BD682CB326715E0D007891DD /* AppDelegate.swift in Sources */,
 				BD682CB526715E0D007891DD /* SceneDelegate.swift in Sources */,
