@@ -28,6 +28,7 @@ class MainPageTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        IProductSwiperService.fetchProducts() // we want to fetch all swiper products when the app initializes
         setupUI()
         observers()
     }

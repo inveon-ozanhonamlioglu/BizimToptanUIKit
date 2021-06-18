@@ -93,10 +93,10 @@
                                         <rect key="frame" x="0.0" y="260" width="200" height="40"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WYN-IV-z6m">
-                                                <rect key="frame" x="8" y="-4" width="184" height="44"/>
+                                                <rect key="frame" x="8" y="0.0" width="184" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkV-sO-fSg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="56" height="44"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="56" height="40"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="23"/>
                                                         <state key="normal" title="-">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -106,14 +106,14 @@
                                                         </connections>
                                                     </button>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qxE-oD-KMj">
-                                                        <rect key="frame" x="64" y="0.0" width="56" height="44"/>
+                                                        <rect key="frame" x="64" y="0.0" width="56" height="40"/>
                                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qE4-jA-nHI">
-                                                        <rect key="frame" x="128" y="0.0" width="56" height="44"/>
+                                                        <rect key="frame" x="128" y="0.0" width="56" height="40"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="23"/>
                                                         <state key="normal" title="+">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -125,13 +125,29 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rZ-jI-weG">
+                                                <rect key="frame" x="8" y="0.0" width="184" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
+                                                <state key="normal" title="Sepete Ekle">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="firstAdd:" destination="gTV-IL-0wX" eventType="touchUpInside" id="84h-es-KVs"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="0T2-7D-fVA"/>
-                                            <constraint firstAttribute="bottom" secondItem="WYN-IV-z6m" secondAttribute="bottom" id="EkH-9d-vEU"/>
-                                            <constraint firstAttribute="trailing" secondItem="WYN-IV-z6m" secondAttribute="trailing" constant="8" id="TKy-9T-3i4"/>
-                                            <constraint firstItem="WYN-IV-z6m" firstAttribute="leading" secondItem="I6J-qy-o0F" secondAttribute="leading" constant="8" id="Wbs-Kh-J9N"/>
+                                            <constraint firstAttribute="bottom" secondItem="WYN-IV-z6m" secondAttribute="bottom" id="A76-9A-e0O"/>
+                                            <constraint firstAttribute="bottom" secondItem="7rZ-jI-weG" secondAttribute="bottom" id="HVH-AP-p7L"/>
+                                            <constraint firstItem="7rZ-jI-weG" firstAttribute="top" secondItem="I6J-qy-o0F" secondAttribute="top" id="XD7-Sd-8VH"/>
+                                            <constraint firstItem="WYN-IV-z6m" firstAttribute="top" secondItem="I6J-qy-o0F" secondAttribute="top" id="air-Tg-vVy"/>
+                                            <constraint firstItem="WYN-IV-z6m" firstAttribute="leading" secondItem="I6J-qy-o0F" secondAttribute="leading" constant="8" id="b64-J6-oMU"/>
+                                            <constraint firstItem="7rZ-jI-weG" firstAttribute="leading" secondItem="I6J-qy-o0F" secondAttribute="leading" constant="8" id="cGp-eG-0Te"/>
+                                            <constraint firstAttribute="trailing" secondItem="WYN-IV-z6m" secondAttribute="trailing" constant="8" id="dg1-ji-uyG"/>
+                                            <constraint firstAttribute="trailing" secondItem="7rZ-jI-weG" secondAttribute="trailing" constant="8" id="wFz-OE-fAv"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -162,6 +178,7 @@
             <connections>
                 <outlet property="addButton" destination="WYN-IV-z6m" id="xys-gt-2ze"/>
                 <outlet property="counter" destination="qxE-oD-KMj" id="rG6-7f-4q5"/>
+                <outlet property="initialAddButton" destination="7rZ-jI-weG" id="QiL-gP-RPG"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>
         </collectionViewCell>

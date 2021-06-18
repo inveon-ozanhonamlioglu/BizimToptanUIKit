@@ -6,11 +6,18 @@
 //
 
 import UIKit
+import Combine
 
 class ProductSwiperTableViewCell: UITableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var loading: Bool = true {
+        willSet {
+            
+        }
+    }
+    var bag = Set<AnyCancellable>()
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,6 +27,7 @@ class ProductSwiperTableViewCell: UITableViewCell {
         collectionView.delegate = self
         
         setupUI()
+        observers()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -31,6 +39,13 @@ class ProductSwiperTableViewCell: UITableViewCell {
     private func setupUI() {
         let cell = UINib(nibName: "ProductSwiperCollectionViewCell", bundle: nil)
         collectionView.register(cell, forCellWithReuseIdentifier: "productSwiperReuseableCell")
+    }
+    
+    private func observers() {
+        IProductSwiperService.bestSeller.compactMap{$0}.sink(receiveValue: { products in
+            print(products)
+        })
+        .store(in: &bag)
     }
     
 }

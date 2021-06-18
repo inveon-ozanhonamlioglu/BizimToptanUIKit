@@ -12,18 +12,21 @@ class ProductSwiperCollectionViewCell: UICollectionViewCell {
     // MARK: - Outlets
     @IBOutlet weak var addButton: UIStackView!
     @IBOutlet weak var counter: UITextField!
-
+    @IBOutlet weak var initialAddButton: UIButton!
+    
+    // in variables
+    var initialAddOccured = false
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-
         setupUI()
     }
-
+    
     private func setupUI() {
         addButton.layer.cornerRadius = 5
+        initialAddButton.layer.cornerRadius = 5
     }
-    
 
     
     // MARK: - Actions
@@ -43,5 +46,10 @@ class ProductSwiperCollectionViewCell: UICollectionViewCell {
             counter.text = String(int + 1)
         }
     }
+    
+    @IBAction func firstAdd(_ sender: UIButton) {
+        initialAddButton.isHidden = true
+    }
+    
     
 }

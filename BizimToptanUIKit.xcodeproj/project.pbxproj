@@ -22,6 +22,9 @@
 		BDCF17762677DB6B002C7D07 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BDCF17752677DB6B002C7D07 /* Kingfisher */; };
 		BDCF17782677DE1A002C7D07 /* InfinitySwiperService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF17772677DE1A002C7D07 /* InfinitySwiperService.swift */; };
 		BDCF177A2677DF6F002C7D07 /* InfinitySwiperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF17792677DF6F002C7D07 /* InfinitySwiperCell.swift */; };
+		BDE912BA267CCAE80005C459 /* ProductSwiperService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE912B9267CCAE80005C459 /* ProductSwiperService.swift */; };
+		BDE912BC267CCB5C0005C459 /* ProductSwiperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE912BB267CCB5C0005C459 /* ProductSwiperModel.swift */; };
+		BDE912BE267CCCAE0005C459 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE912BD267CCCAE0005C459 /* config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		BD68A36E2672A76C0005FE18 /* BannerSwiperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSwiperCell.swift; sourceTree = "<group>"; };
 		BDCF17772677DE1A002C7D07 /* InfinitySwiperService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinitySwiperService.swift; sourceTree = "<group>"; };
 		BDCF17792677DF6F002C7D07 /* InfinitySwiperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinitySwiperCell.swift; sourceTree = "<group>"; };
+		BDE912B9267CCAE80005C459 /* ProductSwiperService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSwiperService.swift; sourceTree = "<group>"; };
+		BDE912BB267CCB5C0005C459 /* ProductSwiperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSwiperModel.swift; sourceTree = "<group>"; };
+		BDE912BD267CCCAE0005C459 /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,8 @@
 			children = (
 				BD68A36B2672A0AF0005FE18 /* BannerSwiperService.swift */,
 				BDCF17772677DE1A002C7D07 /* InfinitySwiperService.swift */,
+				BDE912B9267CCAE80005C459 /* ProductSwiperService.swift */,
+				BDE912BD267CCCAE0005C459 /* config.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -124,6 +132,7 @@
 		BD682CCA26715F97007891DD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BDE912BB267CCB5C0005C459 /* ProductSwiperModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,12 +231,15 @@
 				BD68A36F2672A76C0005FE18 /* BannerSwiperCell.swift in Sources */,
 				BD682CB726715E0D007891DD /* MainPageTableViewController.swift in Sources */,
 				BD15B68B2679ED860063D604 /* ProductSwiperTableViewCell.swift in Sources */,
+				BDE912BC267CCB5C0005C459 /* ProductSwiperModel.swift in Sources */,
 				BD15B68F2679FF280063D604 /* ProductSwiperCollectionViewCell.swift in Sources */,
 				BD68A36C2672A0AF0005FE18 /* BannerSwiperService.swift in Sources */,
 				BD682CB326715E0D007891DD /* AppDelegate.swift in Sources */,
 				BD682CB526715E0D007891DD /* SceneDelegate.swift in Sources */,
 				BDCF17782677DE1A002C7D07 /* InfinitySwiperService.swift in Sources */,
+				BDE912BE267CCCAE0005C459 /* config.swift in Sources */,
 				BDCF177A2677DF6F002C7D07 /* InfinitySwiperCell.swift in Sources */,
+				BDE912BA267CCAE80005C459 /* ProductSwiperService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
