@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ProductSwiperCollectionViewCell: UICollectionViewCell {
     
@@ -13,12 +14,22 @@ class ProductSwiperCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var addButton: UIStackView!
     @IBOutlet weak var counter: UITextField!
     @IBOutlet weak var initialAddButton: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
     
     // in variables
     var initialAddOccured = false
+    var imgUrl: String = "" {
+        willSet {
+            let url = URL(string: newValue)!
+            imageView.kf.setImage(with: url, placeholder: UIImage(named: "nature"), options: .none) { result, error in
+                
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
         setupUI()
     }

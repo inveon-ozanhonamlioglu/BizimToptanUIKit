@@ -27,17 +27,23 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Ggj-Jk-JjI">
+                        <rect key="frame" x="140" y="140" width="20" height="20"/>
+                    </activityIndicatorView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="Ggj-Jk-JjI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Kar-Do-8uN"/>
                     <constraint firstAttribute="trailing" secondItem="Js2-cz-iMO" secondAttribute="trailing" id="bUx-M1-UIu"/>
                     <constraint firstItem="Js2-cz-iMO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="qLF-Wh-WAE"/>
                     <constraint firstAttribute="bottom" secondItem="Js2-cz-iMO" secondAttribute="bottom" id="xCf-de-pUF"/>
+                    <constraint firstItem="Ggj-Jk-JjI" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="ync-3X-NYX"/>
                     <constraint firstItem="Js2-cz-iMO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zC5-VB-o0K"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="collectionView" destination="Js2-cz-iMO" id="GHc-Xk-hNI"/>
+                <outlet property="loader" destination="Ggj-Jk-JjI" id="w3m-4z-Dte"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>
         </tableViewCell>

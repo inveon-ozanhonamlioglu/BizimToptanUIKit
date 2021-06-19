@@ -12,7 +12,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Ntc-Ir-0RN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mkm-sl-WLp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController id="JbH-vS-Ae5" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lFM-h6-9Nt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -24,6 +23,7 @@
                         <segue destination="WwD-6P-qvl" kind="relationship" relationship="viewControllers" id="bpc-ce-HgP"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mkm-sl-WLp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1435" y="359"/>
         </scene>
@@ -62,7 +62,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="186" height="200"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i3" translatesAutoresizingMaskIntoConstraints="NO" id="fxu-H5-ehw" userLabel="bgImage">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nature" translatesAutoresizingMaskIntoConstraints="NO" id="fxu-H5-ehw" userLabel="bgImage">
                                                                         <rect key="frame" x="0.0" y="0.0" width="186" height="200"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="200" id="cKP-Ia-roF"/>
@@ -117,7 +117,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i1" translatesAutoresizingMaskIntoConstraints="NO" id="NGY-kg-kCV">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nature" translatesAutoresizingMaskIntoConstraints="NO" id="NGY-kg-kCV">
                                                                         <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="100" id="Xsh-94-IVH"/>
@@ -253,7 +253,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="186" height="200"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i3" translatesAutoresizingMaskIntoConstraints="NO" id="1Pq-zb-oTo" userLabel="bgImage">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nature" translatesAutoresizingMaskIntoConstraints="NO" id="1Pq-zb-oTo" userLabel="bgImage">
                                                                         <rect key="frame" x="0.0" y="0.0" width="186" height="200"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="200" id="rrS-6O-X9S"/>
@@ -308,7 +308,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i1" translatesAutoresizingMaskIntoConstraints="NO" id="glf-Bo-FJx">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nature" translatesAutoresizingMaskIntoConstraints="NO" id="glf-Bo-FJx">
                                                                         <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="100" id="GQR-NK-vvF"/>
@@ -412,8 +412,7 @@
     </scenes>
     <resources>
         <image name="house" catalog="system" width="128" height="106"/>
-        <image name="i1" width="676" height="923"/>
-        <image name="i3" width="1080" height="1324"/>
+        <image name="nature" width="4167" height="4167"/>
         <image name="square.stack" catalog="system" width="113" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

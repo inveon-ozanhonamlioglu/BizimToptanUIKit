@@ -11,10 +11,11 @@ import Combine
 class ProductSwiperTableViewCell: UITableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var loader: UIActivityIndicatorView!
     
-    var loading: Bool = true {
+    var cvData: MPopularProducts? { // collectionView Data
         willSet {
-            
+            collectionView.reloadData()
         }
     }
     var bag = Set<AnyCancellable>()
@@ -37,13 +38,19 @@ class ProductSwiperTableViewCell: UITableViewCell {
     }
     
     private func setupUI() {
+        loader.startAnimating()
         let cell = UINib(nibName: "ProductSwiperCollectionViewCell", bundle: nil)
         collectionView.register(cell, forCellWithReuseIdentifier: "productSwiperReuseableCell")
     }
     
     private func observers() {
-        IProductSwiperService.bestSeller.compactMap{$0}.sink(receiveValue: { products in
-            print(products)
+        IProductSwiperService.bestSeller.sink(receiveValue: { [weak self] products in
+            if(products != nil) {
+                self?.loader.stopAnimating()
+                self?.loader.isHidden = true
+                
+                self?.cvData = products
+            }
         })
         .store(in: &bag)
     }
@@ -53,11 +60,12 @@ class ProductSwiperTableViewCell: UITableViewCell {
 extension ProductSwiperTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return cvData?.data.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productSwiperReuseableCell", for: indexPath) as! ProductSwiperCollectionViewCell
+        cell.imgUrl = cvData?.data[indexPath.row].imgUrl ?? ""
         return cell
     }
     

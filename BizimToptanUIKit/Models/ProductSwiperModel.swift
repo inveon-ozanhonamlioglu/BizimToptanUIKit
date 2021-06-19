@@ -7,12 +7,6 @@
 
 import Foundation
 
-enum QuickSelect: String {
-    case bestseller
-    case newproducts
-    case choosenforyou
-}
-
 struct MPopularProducts: Decodable, Hashable {
     let headerLabel: String
     let data: [MPopularProductsData]
