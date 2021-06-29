@@ -20,7 +20,7 @@ class ProductSwiperCollectionViewCell: UICollectionViewCell {
     var initialAddOccured = false
     var imgUrl: String = "" {
         willSet {
-            let url = URL(string: newValue)!
+            let url = URL(string: newValue)
             imageView.kf.setImage(with: url, placeholder: UIImage(named: "nature"), options: .none) { result, error in
                 
             }

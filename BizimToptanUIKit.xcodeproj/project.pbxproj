@@ -18,10 +18,12 @@
 		BD682CBC26715E0E007891DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD682CBB26715E0E007891DD /* Assets.xcassets */; };
 		BD682CBF26715E0E007891DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD682CBD26715E0E007891DD /* LaunchScreen.storyboard */; };
 		BD68A36C2672A0AF0005FE18 /* BannerSwiperService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68A36B2672A0AF0005FE18 /* BannerSwiperService.swift */; };
-		BD68A36F2672A76C0005FE18 /* BannerSwiperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68A36E2672A76C0005FE18 /* BannerSwiperCell.swift */; };
+		BDC1892A268B24C50079A097 /* InfinitySwiperCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC18928268B24C50079A097 /* InfinitySwiperCollectionViewCell.swift */; };
+		BDC1892B268B24C50079A097 /* InfinitySwiperCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC18929268B24C50079A097 /* InfinitySwiperCollectionViewCell.xib */; };
+		BDC1892F268B5FE30079A097 /* BannerSwiperCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1892D268B5FE30079A097 /* BannerSwiperCollectionViewCell.swift */; };
+		BDC18930268B5FE30079A097 /* BannerSwiperCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC1892E268B5FE30079A097 /* BannerSwiperCollectionViewCell.xib */; };
 		BDCF17762677DB6B002C7D07 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BDCF17752677DB6B002C7D07 /* Kingfisher */; };
 		BDCF17782677DE1A002C7D07 /* InfinitySwiperService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF17772677DE1A002C7D07 /* InfinitySwiperService.swift */; };
-		BDCF177A2677DF6F002C7D07 /* InfinitySwiperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF17792677DF6F002C7D07 /* InfinitySwiperCell.swift */; };
 		BDE912BA267CCAE80005C459 /* ProductSwiperService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE912B9267CCAE80005C459 /* ProductSwiperService.swift */; };
 		BDE912BC267CCB5C0005C459 /* ProductSwiperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE912BB267CCB5C0005C459 /* ProductSwiperModel.swift */; };
 		BDE912BE267CCCAE0005C459 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE912BD267CCCAE0005C459 /* config.swift */; };
@@ -41,9 +43,11 @@
 		BD682CBE26715E0E007891DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD682CC026715E0E007891DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD68A36B2672A0AF0005FE18 /* BannerSwiperService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSwiperService.swift; sourceTree = "<group>"; };
-		BD68A36E2672A76C0005FE18 /* BannerSwiperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSwiperCell.swift; sourceTree = "<group>"; };
+		BDC18928268B24C50079A097 /* InfinitySwiperCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinitySwiperCollectionViewCell.swift; sourceTree = "<group>"; };
+		BDC18929268B24C50079A097 /* InfinitySwiperCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfinitySwiperCollectionViewCell.xib; sourceTree = "<group>"; };
+		BDC1892D268B5FE30079A097 /* BannerSwiperCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSwiperCollectionViewCell.swift; sourceTree = "<group>"; };
+		BDC1892E268B5FE30079A097 /* BannerSwiperCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerSwiperCollectionViewCell.xib; sourceTree = "<group>"; };
 		BDCF17772677DE1A002C7D07 /* InfinitySwiperService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinitySwiperService.swift; sourceTree = "<group>"; };
-		BDCF17792677DF6F002C7D07 /* InfinitySwiperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinitySwiperCell.swift; sourceTree = "<group>"; };
 		BDE912B9267CCAE80005C459 /* ProductSwiperService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSwiperService.swift; sourceTree = "<group>"; };
 		BDE912BB267CCB5C0005C459 /* ProductSwiperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSwiperModel.swift; sourceTree = "<group>"; };
 		BDE912BD267CCCAE0005C459 /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
@@ -140,14 +144,64 @@
 		BD68A36D2672A75D0005FE18 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BD68A36E2672A76C0005FE18 /* BannerSwiperCell.swift */,
-				BDCF17792677DF6F002C7D07 /* InfinitySwiperCell.swift */,
+				BDC18932268B66FE0079A097 /* TableViewCell */,
+				BDC18931268B66F20079A097 /* CollectionViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BDA4A99D26849B3F000DB693 /* ProductSwiper */ = {
+			isa = PBXGroup;
+			children = (
 				BD15B6892679ED860063D604 /* ProductSwiperTableViewCell.swift */,
 				BD15B68A2679ED860063D604 /* ProductSwiperTableViewCell.xib */,
+			);
+			path = ProductSwiper;
+			sourceTree = "<group>";
+		};
+		BDC18927268B243F0079A097 /* InfinitySwiper */ = {
+			isa = PBXGroup;
+			children = (
+				BDC18928268B24C50079A097 /* InfinitySwiperCollectionViewCell.swift */,
+				BDC18929268B24C50079A097 /* InfinitySwiperCollectionViewCell.xib */,
+			);
+			path = InfinitySwiper;
+			sourceTree = "<group>";
+		};
+		BDC1892C268B4A140079A097 /* BannerSwiper */ = {
+			isa = PBXGroup;
+			children = (
+				BDC1892D268B5FE30079A097 /* BannerSwiperCollectionViewCell.swift */,
+				BDC1892E268B5FE30079A097 /* BannerSwiperCollectionViewCell.xib */,
+			);
+			path = BannerSwiper;
+			sourceTree = "<group>";
+		};
+		BDC18931268B66F20079A097 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BDC18933268B67380079A097 /* ProductSwiper */,
+				BDC18927268B243F0079A097 /* InfinitySwiper */,
+				BDC1892C268B4A140079A097 /* BannerSwiper */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		BDC18932268B66FE0079A097 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BDA4A99D26849B3F000DB693 /* ProductSwiper */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		BDC18933268B67380079A097 /* ProductSwiper */ = {
+			isa = PBXGroup;
+			children = (
 				BD15B68D2679FF280063D604 /* ProductSwiperCollectionViewCell.swift */,
 				BD15B68E2679FF280063D604 /* ProductSwiperCollectionViewCell.xib */,
 			);
-			path = Views;
+			path = ProductSwiper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +271,8 @@
 				BD682CBF26715E0E007891DD /* LaunchScreen.storyboard in Resources */,
 				BD15B68C2679ED860063D604 /* ProductSwiperTableViewCell.xib in Resources */,
 				BD682CBC26715E0E007891DD /* Assets.xcassets in Resources */,
+				BDC18930268B5FE30079A097 /* BannerSwiperCollectionViewCell.xib in Resources */,
+				BDC1892B268B24C50079A097 /* InfinitySwiperCollectionViewCell.xib in Resources */,
 				BD682CBA26715E0D007891DD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,7 +284,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD68A36F2672A76C0005FE18 /* BannerSwiperCell.swift in Sources */,
 				BD682CB726715E0D007891DD /* MainPageTableViewController.swift in Sources */,
 				BD15B68B2679ED860063D604 /* ProductSwiperTableViewCell.swift in Sources */,
 				BDE912BC267CCB5C0005C459 /* ProductSwiperModel.swift in Sources */,
@@ -236,10 +291,11 @@
 				BD68A36C2672A0AF0005FE18 /* BannerSwiperService.swift in Sources */,
 				BD682CB326715E0D007891DD /* AppDelegate.swift in Sources */,
 				BD682CB526715E0D007891DD /* SceneDelegate.swift in Sources */,
+				BDC1892A268B24C50079A097 /* InfinitySwiperCollectionViewCell.swift in Sources */,
 				BDCF17782677DE1A002C7D07 /* InfinitySwiperService.swift in Sources */,
 				BDE912BE267CCCAE0005C459 /* config.swift in Sources */,
-				BDCF177A2677DF6F002C7D07 /* InfinitySwiperCell.swift in Sources */,
 				BDE912BA267CCAE80005C459 /* ProductSwiperService.swift in Sources */,
+				BDC1892F268B5FE30079A097 /* BannerSwiperCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

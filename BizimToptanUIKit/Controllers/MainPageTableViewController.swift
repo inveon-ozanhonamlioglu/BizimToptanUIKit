@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import Kingfisher
 
 class MainPageTableViewController: UITableViewController {
 
@@ -77,8 +78,14 @@ class MainPageTableViewController: UITableViewController {
         infinitySwiperCollectionView.delegate = self
         
         // register xibs.
-        let cell = UINib(nibName: "ProductSwiperTableViewCell", bundle: nil)
-        tableView.register(cell, forCellReuseIdentifier: "thirdRow")
+        let pstvc = UINib(nibName: "ProductSwiperTableViewCell", bundle: nil)
+        tableView.register(pstvc, forCellReuseIdentifier: "thirdRow")
+        
+        let iscvc = UINib(nibName: "InfinitySwiperCollectionViewCell", bundle: nil)
+        infinitySwiperCollectionView.register(iscvc, forCellWithReuseIdentifier: "infinitySwiperCollectionViewCell")
+        
+        let bscvc = UINib(nibName: "BannerSwiperCollectionViewCell", bundle: nil)
+        bannerSwiperCollectionView.register(bscvc, forCellWithReuseIdentifier: "bannerSwiperCollectionViewCell")
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -108,21 +115,17 @@ extension MainPageTableViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if(collectionView == bannerSwiperCollectionView) { // for the first section "BannerSwiper"
             
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bannerSwiperCell", for: indexPath) as! BannerSwiperCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bannerSwiperCollectionViewCell", for: indexPath) as! BannerSwiperCollectionViewCell
             
             let imageUrl = bannerSwiperImages[indexPath.row]
             cell.imageUrl = imageUrl
-            // cell.contentView.backgroundColor = bannerService.randomColor
-            
             return cell
             
         } else if(collectionView == infinitySwiperCollectionView) {
-
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "infinitySwiperCell", for: indexPath) as! InfinitySwiperCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "infinitySwiperCollectionViewCell", for: indexPath) as! InfinitySwiperCollectionViewCell
             let imgUrl = infinitySwiperImages[indexPath.row]
             cell.imageUrl = imgUrl
             return cell
-            
         }
 
         
