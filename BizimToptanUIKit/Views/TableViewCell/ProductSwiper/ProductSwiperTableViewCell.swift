@@ -13,11 +13,18 @@ class ProductSwiperTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var loader: UIActivityIndicatorView!
     
-    var cvData: MPopularProducts? { // collectionView Data
+    var selectTab: ProductSwiperTab = .bestSeller
+    
+    var cvData: MPopularProducts? {
         willSet {
             collectionView.reloadData()
         }
     }
+    
+    var bestSeller: MPopularProducts?
+    var newProducts: MPopularProducts?
+    var choosenForYou: MPopularProducts?
+    
     var bag = Set<AnyCancellable>()
 
     override func awakeFromNib() {
@@ -49,11 +56,67 @@ class ProductSwiperTableViewCell: UITableViewCell {
                 self?.loader.stopAnimating()
                 self?.loader.isHidden = true
                 
-                self?.cvData = products
+                if(self?.selectTab == .bestSeller) {
+                    self?.cvData = products
+                }
+                
+                self?.bestSeller = products
             }
         })
         .store(in: &bag)
+        
+        IProductSwiperService.newProducts.sink(receiveValue: { [weak self] products in
+            if(products != nil) {
+                self?.loader.stopAnimating()
+                self?.loader.isHidden = true
+                
+                if(self?.selectTab == .newProduct) {
+                    self?.cvData = products
+                }
+                
+                self?.newProducts = products
+            }
+        })
+        .store(in: &bag)
+        
+        IProductSwiperService.choosenForYou.sink(receiveValue: { [weak self] products in
+            if(products != nil) {
+                self?.loader.stopAnimating()
+                self?.loader.isHidden = true
+                
+                if(self?.selectTab == .chosenForYou) {
+                    self?.cvData = products
+                }
+                
+                self?.choosenForYou = products
+            }
+        })
+        .store(in: &bag)
+        
     }
+    
+    @IBAction func tabController(_ sender: UISegmentedControl) {
+        let selectedIndex = ProductSwiperTab(rawValue: sender.selectedSegmentIndex as Int) ?? .bestSeller
+        
+        switch selectedIndex {
+        case .bestSeller:
+            selectTab = .bestSeller
+            cvData = bestSeller
+            break
+            
+        case .newProduct:
+            selectTab = .newProduct
+            cvData = newProducts
+            break
+            
+        case .chosenForYou:
+            selectTab = .chosenForYou
+            cvData = choosenForYou
+            break
+        }
+        
+    }
+    
     
 }
 

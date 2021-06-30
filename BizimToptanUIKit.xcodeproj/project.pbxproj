@@ -13,11 +13,12 @@
 		BD15B6902679FF280063D604 /* ProductSwiperCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD15B68E2679FF280063D604 /* ProductSwiperCollectionViewCell.xib */; };
 		BD682CB326715E0D007891DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD682CB226715E0D007891DD /* AppDelegate.swift */; };
 		BD682CB526715E0D007891DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD682CB426715E0D007891DD /* SceneDelegate.swift */; };
-		BD682CB726715E0D007891DD /* MainPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD682CB626715E0D007891DD /* MainPageTableViewController.swift */; };
+		BD682CB726715E0D007891DD /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD682CB626715E0D007891DD /* HomeController.swift */; };
 		BD682CBA26715E0D007891DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD682CB826715E0D007891DD /* Main.storyboard */; };
 		BD682CBC26715E0E007891DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD682CBB26715E0E007891DD /* Assets.xcassets */; };
 		BD682CBF26715E0E007891DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD682CBD26715E0E007891DD /* LaunchScreen.storyboard */; };
 		BD68A36C2672A0AF0005FE18 /* BannerSwiperService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68A36B2672A0AF0005FE18 /* BannerSwiperService.swift */; };
+		BDAE7627268CC3AE00FD3C8D /* InitialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAE7626268CC3AE00FD3C8D /* InitialController.swift */; };
 		BDC1892A268B24C50079A097 /* InfinitySwiperCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC18928268B24C50079A097 /* InfinitySwiperCollectionViewCell.swift */; };
 		BDC1892B268B24C50079A097 /* InfinitySwiperCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC18929268B24C50079A097 /* InfinitySwiperCollectionViewCell.xib */; };
 		BDC1892F268B5FE30079A097 /* BannerSwiperCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1892D268B5FE30079A097 /* BannerSwiperCollectionViewCell.swift */; };
@@ -37,12 +38,13 @@
 		BD682CAF26715E0D007891DD /* BizimToptanUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BizimToptanUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD682CB226715E0D007891DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD682CB426715E0D007891DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BD682CB626715E0D007891DD /* MainPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageTableViewController.swift; sourceTree = "<group>"; };
+		BD682CB626715E0D007891DD /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		BD682CB926715E0D007891DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD682CBB26715E0E007891DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD682CBE26715E0E007891DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD682CC026715E0E007891DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD68A36B2672A0AF0005FE18 /* BannerSwiperService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSwiperService.swift; sourceTree = "<group>"; };
+		BDAE7626268CC3AE00FD3C8D /* InitialController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialController.swift; sourceTree = "<group>"; };
 		BDC18928268B24C50079A097 /* InfinitySwiperCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinitySwiperCollectionViewCell.swift; sourceTree = "<group>"; };
 		BDC18929268B24C50079A097 /* InfinitySwiperCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfinitySwiperCollectionViewCell.xib; sourceTree = "<group>"; };
 		BDC1892D268B5FE30079A097 /* BannerSwiperCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSwiperCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -103,7 +105,8 @@
 		BD682CC626715F51007891DD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BD682CB626715E0D007891DD /* MainPageTableViewController.swift */,
+				BD682CB626715E0D007891DD /* HomeController.swift */,
+				BDAE7626268CC3AE00FD3C8D /* InitialController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -284,7 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD682CB726715E0D007891DD /* MainPageTableViewController.swift in Sources */,
+				BD682CB726715E0D007891DD /* HomeController.swift in Sources */,
 				BD15B68B2679ED860063D604 /* ProductSwiperTableViewCell.swift in Sources */,
 				BDE912BC267CCB5C0005C459 /* ProductSwiperModel.swift in Sources */,
 				BD15B68F2679FF280063D604 /* ProductSwiperCollectionViewCell.swift in Sources */,
@@ -295,6 +298,7 @@
 				BDCF17782677DE1A002C7D07 /* InfinitySwiperService.swift in Sources */,
 				BDE912BE267CCCAE0005C459 /* config.swift in Sources */,
 				BDE912BA267CCAE80005C459 /* ProductSwiperService.swift in Sources */,
+				BDAE7627268CC3AE00FD3C8D /* InitialController.swift in Sources */,
 				BDC1892F268B5FE30079A097 /* BannerSwiperCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

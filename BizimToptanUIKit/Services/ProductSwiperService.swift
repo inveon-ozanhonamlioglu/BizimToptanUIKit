@@ -8,6 +8,10 @@
 import Foundation
 import Combine
 
+enum ProductSwiperTab: Int {
+    case bestSeller, newProduct, chosenForYou
+}
+
 class ProductSwiperService {
     var bestSeller = CurrentValueSubject<MPopularProducts?, Never>(nil)
     var newProducts = CurrentValueSubject<MPopularProducts?, Never>(nil)

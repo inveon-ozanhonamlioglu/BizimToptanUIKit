@@ -9,7 +9,7 @@ import UIKit
 import Combine
 import Kingfisher
 
-class MainPageTableViewController: UITableViewController {
+class HomeController: UITableViewController {
 
     // MARK: - IBOutlets
     @IBOutlet weak var bannerSwiperCollectionView: UICollectionView!
@@ -100,7 +100,7 @@ class MainPageTableViewController: UITableViewController {
 }
 
 
-extension MainPageTableViewController: UICollectionViewDataSource {
+extension HomeController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if(collectionView == bannerSwiperCollectionView) { // for the first section "BannerSwiper"
@@ -136,7 +136,7 @@ extension MainPageTableViewController: UICollectionViewDataSource {
 }
 
 
-extension MainPageTableViewController: UICollectionViewDelegate {
+extension HomeController: UICollectionViewDelegate {
     
     override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         
