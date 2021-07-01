@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -169,7 +168,6 @@
                     </view>
                 </subviews>
             </view>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="D34-5j-bYt" secondAttribute="bottom" id="7aY-JT-APR"/>
                 <constraint firstItem="D34-5j-bYt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="FWt-d8-gXK"/>
@@ -179,8 +177,11 @@
             <connections>
                 <outlet property="addButton" destination="WYN-IV-z6m" id="xys-gt-2ze"/>
                 <outlet property="counter" destination="qxE-oD-KMj" id="rG6-7f-4q5"/>
+                <outlet property="currentPrice" destination="a7B-cW-aIn" id="ECm-Fp-HVM"/>
                 <outlet property="imageView" destination="TdN-TR-m9y" id="ht6-Fp-FWq"/>
                 <outlet property="initialAddButton" destination="7rZ-jI-weG" id="QiL-gP-RPG"/>
+                <outlet property="oldPrice" destination="UU0-PF-hE6" id="ptJ-Gg-iyC"/>
+                <outlet property="productLabel" destination="KPO-1d-6K7" id="r37-JE-QJi"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>
         </collectionViewCell>

@@ -15,6 +15,9 @@ class ProductSwiperCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var counter: UITextField!
     @IBOutlet weak var initialAddButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var productLabel: UILabel!
+    @IBOutlet weak var currentPrice: UILabel!
+    @IBOutlet weak var oldPrice: UILabel!
     
     // in variables
     var initialAddOccured = false

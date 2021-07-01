@@ -129,6 +129,11 @@ extension ProductSwiperTableViewCell: UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productSwiperReuseableCell", for: indexPath) as! ProductSwiperCollectionViewCell
         cell.imgUrl = cvData?.data[indexPath.row].imgUrl ?? ""
+        cell.productLabel.text = cvData?.data[indexPath.row].name ?? ""
+        cell.currentPrice.text = cvData?.data[indexPath.row].price ?? ""
+        
+        let oldPrice = cvData?.data[indexPath.row].oldPrice ?? ""
+        cell.oldPrice.attributedText = oldPrice.createAttributedText(with: [.strikethroughStyle: NSUnderlineStyle.single.rawValue])
         return cell
     }
     

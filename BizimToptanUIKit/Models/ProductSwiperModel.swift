@@ -18,5 +18,6 @@ struct MPopularProductsData: Decodable, Hashable {
     let description: String
     let imgUrl: String
     let price: String
+    let oldPrice: String?
     let id: Int
 }

@@ -60,7 +60,7 @@
             </objects>
             <point key="canvasLocation" x="-526.08695652173913" y="358.92857142857139"/>
         </scene>
-        <!--Home-->
+        <!--Title-->
         <scene sceneID="tog-SR-0xq">
             <objects>
                 <tableViewController id="tMb-Ld-2Ou" customClass="HomeController" customModule="BizimToptanUIKit" customModuleProvider="target" sceneMemberID="viewController">
@@ -174,7 +174,7 @@
                             <outlet property="delegate" destination="tMb-Ld-2Ou" id="2Cb-rM-rT2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Home" id="qak-4S-6dA"/>
+                    <navigationItem key="navigationItem" title="Title" id="FyO-gK-ewq"/>
                     <connections>
                         <outlet property="bannerSwiperCollectionView" destination="zk4-6t-YVE" id="MAL-2d-yj9"/>
                         <outlet property="infinitySwiperCollectionView" destination="sjW-Xr-qm9" id="eyh-1t-YOW"/>
