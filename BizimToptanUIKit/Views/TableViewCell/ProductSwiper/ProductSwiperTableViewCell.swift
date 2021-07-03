@@ -12,6 +12,7 @@ class ProductSwiperTableViewCell: UITableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var loader: UIActivityIndicatorView!
+    @IBOutlet weak var segment: UISegmentedControl!
     
     var selectTab: ProductSwiperTab = .bestSeller
     
@@ -93,6 +94,19 @@ class ProductSwiperTableViewCell: UITableViewCell {
         })
         .store(in: &bag)
         
+    }
+    
+    func removeSegment() {
+        segment.translatesAutoresizingMaskIntoConstraints = false
+        segment.isHidden = true
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: topAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            collectionView.leftAnchor.constraint(equalTo: leftAnchor),
+            collectionView.rightAnchor.constraint(equalTo: rightAnchor)
+        ])
     }
     
     @IBAction func tabController(_ sender: UISegmentedControl) {

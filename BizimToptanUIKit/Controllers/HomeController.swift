@@ -14,6 +14,7 @@ class HomeController: UITableViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var bannerSwiperCollectionView: UICollectionView!
     @IBOutlet weak var infinitySwiperCollectionView: UICollectionView!
+    @IBOutlet weak var infinitySwiperSecondCollectionView: UICollectionView!
     
     
     // MARK: - Managers
@@ -77,20 +78,39 @@ class HomeController: UITableViewController {
         infinitySwiperCollectionView.dataSource = self
         infinitySwiperCollectionView.delegate = self
         
+        infinitySwiperSecondCollectionView.dataSource = self
+        infinitySwiperSecondCollectionView.delegate = self
+        
         // register xibs.
         let pstvc = UINib(nibName: "ProductSwiperTableViewCell", bundle: nil)
         tableView.register(pstvc, forCellReuseIdentifier: "thirdRow")
+        tableView.register(pstvc, forCellReuseIdentifier: "fifthRow")
         
         let iscvc = UINib(nibName: "InfinitySwiperCollectionViewCell", bundle: nil)
         infinitySwiperCollectionView.register(iscvc, forCellWithReuseIdentifier: "infinitySwiperCollectionViewCell")
+        infinitySwiperSecondCollectionView.register(iscvc, forCellWithReuseIdentifier: "infinitySwiperCollectionViewCell")
         
         let bscvc = UINib(nibName: "BannerSwiperCollectionViewCell", bundle: nil)
         bannerSwiperCollectionView.register(bscvc, forCellWithReuseIdentifier: "bannerSwiperCollectionViewCell")
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if(indexPath.row == 4) {
+            return 320
+        }
+
+        return super.tableView(tableView, heightForRowAt: indexPath)
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if(indexPath.row == 2) {
             let cell = tableView.dequeueReusableCell(withIdentifier: "thirdRow", for: indexPath) as! ProductSwiperTableViewCell
+            return cell
+        } else if(indexPath.row == 4) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "thirdRow", for: indexPath) as! ProductSwiperTableViewCell
+            cell.removeSegment()
+            cell.selectTab = .chosenForYou
+            cell.loader.startAnimating()
             return cell
         }
         
@@ -106,6 +126,8 @@ extension HomeController: UICollectionViewDataSource {
         if(collectionView == bannerSwiperCollectionView) { // for the first section "BannerSwiper"
             return bannerSwiperImages.count
         } else if(collectionView == infinitySwiperCollectionView) {
+            return infinitySwiperImages.count
+        } else if(collectionView == infinitySwiperSecondCollectionView) {
             return infinitySwiperImages.count
         }
 
@@ -126,11 +148,15 @@ extension HomeController: UICollectionViewDataSource {
             let imgUrl = infinitySwiperImages[indexPath.row]
             cell.imageUrl = imgUrl
             return cell
+        } else if(collectionView == infinitySwiperSecondCollectionView) {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "infinitySwiperCollectionViewCell", for: indexPath) as! InfinitySwiperCollectionViewCell
+            let imgUrl = infinitySwiperImages[indexPath.row]
+            cell.imageUrl = imgUrl
+            return cell
         }
-
+        
         
         return UICollectionViewCell(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-        
     }
     
 }

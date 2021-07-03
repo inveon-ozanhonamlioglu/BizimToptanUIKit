@@ -142,24 +142,52 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="sBI-jJ-FgA">
-                                        <rect key="frame" x="0.0" y="734.5" width="414" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="120" id="sBI-jJ-FgA">
+                                        <rect key="frame" x="0.0" y="734.5" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sBI-jJ-FgA" id="ujp-4s-vHj">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SVG-tA-Ezy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rua-9I-iTU">
+                                                        <size key="itemSize" width="150" height="100"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="o6L-1b-ybj">
+                                                            <rect key="frame" x="0.0" y="10" width="150" height="100"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Rw4-SR-qUq">
+                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                            </collectionViewCellContentView>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="SVG-tA-Ezy" secondAttribute="bottom" id="IXz-X8-yhq"/>
+                                                <constraint firstAttribute="trailing" secondItem="SVG-tA-Ezy" secondAttribute="trailing" id="dik-EL-6xL"/>
+                                                <constraint firstItem="SVG-tA-Ezy" firstAttribute="leading" secondItem="ujp-4s-vHj" secondAttribute="leading" id="gku-IE-BbX"/>
+                                                <constraint firstItem="SVG-tA-Ezy" firstAttribute="top" secondItem="ujp-4s-vHj" secondAttribute="top" id="l4f-zH-MJ1"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="300" id="Ixh-Dl-ASq">
-                                        <rect key="frame" x="0.0" y="834.5" width="414" height="300"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="fifthRow" rowHeight="320" id="Ixh-Dl-ASq">
+                                        <rect key="frame" x="0.0" y="854.5" width="414" height="320"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ixh-Dl-ASq" id="xl6-9U-Spa">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="200" id="3EK-0o-5ZJ">
-                                        <rect key="frame" x="0.0" y="1134.5" width="414" height="200"/>
+                                        <rect key="frame" x="0.0" y="1174.5" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3EK-0o-5ZJ" id="n9a-fG-phb">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
@@ -178,6 +206,7 @@
                     <connections>
                         <outlet property="bannerSwiperCollectionView" destination="zk4-6t-YVE" id="MAL-2d-yj9"/>
                         <outlet property="infinitySwiperCollectionView" destination="sjW-Xr-qm9" id="eyh-1t-YOW"/>
+                        <outlet property="infinitySwiperSecondCollectionView" destination="SVG-tA-Ezy" id="wFW-id-UFC"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u7C-kU-A2f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -59,6 +59,7 @@
             <connections>
                 <outlet property="collectionView" destination="Js2-cz-iMO" id="GHc-Xk-hNI"/>
                 <outlet property="loader" destination="Ggj-Jk-JjI" id="w3m-4z-Dte"/>
+                <outlet property="segment" destination="8Zm-cO-Kg4" id="uo9-Rc-xzZ"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>
         </tableViewCell>
