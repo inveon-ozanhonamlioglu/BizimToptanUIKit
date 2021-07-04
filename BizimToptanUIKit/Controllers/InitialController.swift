@@ -19,7 +19,7 @@ class InitialController: UIViewController {
     private func redirect() {
         loader.startAnimating()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 02) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 01) {
             self.performSegue(withIdentifier: "routeToFirstTab", sender: nil)
         }
         

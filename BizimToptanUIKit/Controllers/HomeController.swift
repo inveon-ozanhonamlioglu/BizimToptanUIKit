@@ -15,6 +15,7 @@ class HomeController: UITableViewController {
     @IBOutlet weak var bannerSwiperCollectionView: UICollectionView!
     @IBOutlet weak var infinitySwiperCollectionView: UICollectionView!
     @IBOutlet weak var infinitySwiperSecondCollectionView: UICollectionView!
+    @IBOutlet weak var infinitySwiperBlockCollectionView: UICollectionView!
     
     
     // MARK: - Managers
@@ -29,7 +30,10 @@ class HomeController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // set header
+        self.homeHeader()
+        
         IProductSwiperService.fetchProducts() // we want to fetch all swiper products when the app initializes
         setupUI()
         observers()
@@ -81,6 +85,9 @@ class HomeController: UITableViewController {
         infinitySwiperSecondCollectionView.dataSource = self
         infinitySwiperSecondCollectionView.delegate = self
         
+        infinitySwiperBlockCollectionView.dataSource = self
+        infinitySwiperBlockCollectionView.delegate = self
+        
         // register xibs.
         let pstvc = UINib(nibName: "ProductSwiperTableViewCell", bundle: nil)
         tableView.register(pstvc, forCellReuseIdentifier: "thirdRow")
@@ -89,6 +96,7 @@ class HomeController: UITableViewController {
         let iscvc = UINib(nibName: "InfinitySwiperCollectionViewCell", bundle: nil)
         infinitySwiperCollectionView.register(iscvc, forCellWithReuseIdentifier: "infinitySwiperCollectionViewCell")
         infinitySwiperSecondCollectionView.register(iscvc, forCellWithReuseIdentifier: "infinitySwiperCollectionViewCell")
+        infinitySwiperBlockCollectionView.register(iscvc, forCellWithReuseIdentifier: "infinitySwiperCollectionViewCell")
         
         let bscvc = UINib(nibName: "BannerSwiperCollectionViewCell", bundle: nil)
         bannerSwiperCollectionView.register(bscvc, forCellWithReuseIdentifier: "bannerSwiperCollectionViewCell")
@@ -97,6 +105,9 @@ class HomeController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if(indexPath.row == 4) {
             return 320
+        } else if(indexPath.row == 5) {
+            let height = (infinitySwiperImages.count / 2) * 140
+            return CGFloat(height)
         }
 
         return super.tableView(tableView, heightForRowAt: indexPath)
@@ -120,7 +131,7 @@ class HomeController: UITableViewController {
 }
 
 
-extension HomeController: UICollectionViewDataSource {
+extension HomeController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if(collectionView == bannerSwiperCollectionView) { // for the first section "BannerSwiper"
@@ -128,6 +139,8 @@ extension HomeController: UICollectionViewDataSource {
         } else if(collectionView == infinitySwiperCollectionView) {
             return infinitySwiperImages.count
         } else if(collectionView == infinitySwiperSecondCollectionView) {
+            return infinitySwiperImages.count
+        } else if(collectionView == infinitySwiperBlockCollectionView) {
             return infinitySwiperImages.count
         }
 
@@ -153,10 +166,24 @@ extension HomeController: UICollectionViewDataSource {
             let imgUrl = infinitySwiperImages[indexPath.row]
             cell.imageUrl = imgUrl
             return cell
+        } else if(collectionView == infinitySwiperBlockCollectionView) {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "infinitySwiperCollectionViewCell", for: indexPath) as! InfinitySwiperCollectionViewCell
+            let imgUrl = infinitySwiperImages[indexPath.row]
+            cell.imageUrl = imgUrl
+            return cell
         }
         
         
         return UICollectionViewCell(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+        if(collectionView == infinitySwiperBlockCollectionView) {
+            return CGSize(width: UIScreen.main.bounds.width / 2.3, height: 120)
+        }
+
+        return CGSize(width: 150, height: 100)
     }
     
 }

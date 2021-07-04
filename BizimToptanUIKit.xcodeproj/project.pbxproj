@@ -29,6 +29,7 @@
 		BDE912BA267CCAE80005C459 /* ProductSwiperService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE912B9267CCAE80005C459 /* ProductSwiperService.swift */; };
 		BDE912BC267CCB5C0005C459 /* ProductSwiperModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE912BB267CCB5C0005C459 /* ProductSwiperModel.swift */; };
 		BDE912BE267CCCAE0005C459 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE912BD267CCCAE0005C459 /* config.swift */; };
+		BDE9A4772691F0DD00F3A487 /* Headers+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE9A4762691F0DD00F3A487 /* Headers+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		BDE912B9267CCAE80005C459 /* ProductSwiperService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSwiperService.swift; sourceTree = "<group>"; };
 		BDE912BB267CCB5C0005C459 /* ProductSwiperModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSwiperModel.swift; sourceTree = "<group>"; };
 		BDE912BD267CCCAE0005C459 /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
+		BDE9A4762691F0DD00F3A487 /* Headers+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Headers+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				4DA3A2AB268DFB5D00E229A3 /* String+Extension.swift */,
+				BDE9A4762691F0DD00F3A487 /* Headers+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				BDCF17782677DE1A002C7D07 /* InfinitySwiperService.swift in Sources */,
 				BDE912BE267CCCAE0005C459 /* config.swift in Sources */,
 				BDE912BA267CCAE80005C459 /* ProductSwiperService.swift in Sources */,
+				BDE9A4772691F0DD00F3A487 /* Headers+Extension.swift in Sources */,
 				BDAE7627268CC3AE00FD3C8D /* InitialController.swift in Sources */,
 				BDC1892F268B5FE30079A097 /* BannerSwiperCollectionViewCell.swift in Sources */,
 			);
