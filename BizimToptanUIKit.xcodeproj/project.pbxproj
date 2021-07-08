@@ -12,6 +12,8 @@
 		BD15B68C2679ED860063D604 /* ProductSwiperTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD15B68A2679ED860063D604 /* ProductSwiperTableViewCell.xib */; };
 		BD15B68F2679FF280063D604 /* ProductSwiperCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD15B68D2679FF280063D604 /* ProductSwiperCollectionViewCell.swift */; };
 		BD15B6902679FF280063D604 /* ProductSwiperCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD15B68E2679FF280063D604 /* ProductSwiperCollectionViewCell.xib */; };
+		BD3EE8B22696F81900FB0C0C /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3EE8B12696F81900FB0C0C /* Buttons.swift */; };
+		BD3EE8B42697325E00FB0C0C /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3EE8B32697325E00FB0C0C /* LoginController.swift */; };
 		BD682CB326715E0D007891DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD682CB226715E0D007891DD /* AppDelegate.swift */; };
 		BD682CB526715E0D007891DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD682CB426715E0D007891DD /* SceneDelegate.swift */; };
 		BD682CB726715E0D007891DD /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD682CB626715E0D007891DD /* HomeController.swift */; };
@@ -38,6 +40,8 @@
 		BD15B68A2679ED860063D604 /* ProductSwiperTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductSwiperTableViewCell.xib; sourceTree = "<group>"; };
 		BD15B68D2679FF280063D604 /* ProductSwiperCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSwiperCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD15B68E2679FF280063D604 /* ProductSwiperCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductSwiperCollectionViewCell.xib; sourceTree = "<group>"; };
+		BD3EE8B12696F81900FB0C0C /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		BD3EE8B32697325E00FB0C0C /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		BD682CAF26715E0D007891DD /* BizimToptanUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BizimToptanUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD682CB226715E0D007891DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD682CB426715E0D007891DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 			children = (
 				BD682CB626715E0D007891DD /* HomeController.swift */,
 				BDAE7626268CC3AE00FD3C8D /* InitialController.swift */,
+				BD3EE8B32697325E00FB0C0C /* LoginController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 			children = (
 				BDC18932268B66FE0079A097 /* TableViewCell */,
 				BDC18931268B66F20079A097 /* CollectionViewCell */,
+				BD3EE8B12696F81900FB0C0C /* Buttons.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,11 +304,13 @@
 				BDE912BC267CCB5C0005C459 /* ProductSwiperModel.swift in Sources */,
 				BD15B68F2679FF280063D604 /* ProductSwiperCollectionViewCell.swift in Sources */,
 				BD68A36C2672A0AF0005FE18 /* BannerSwiperService.swift in Sources */,
+				BD3EE8B22696F81900FB0C0C /* Buttons.swift in Sources */,
 				BD682CB326715E0D007891DD /* AppDelegate.swift in Sources */,
 				BD682CB526715E0D007891DD /* SceneDelegate.swift in Sources */,
 				BDC1892A268B24C50079A097 /* InfinitySwiperCollectionViewCell.swift in Sources */,
 				4DA3A2AC268DFB5D00E229A3 /* String+Extension.swift in Sources */,
 				BDCF17782677DE1A002C7D07 /* InfinitySwiperService.swift in Sources */,
+				BD3EE8B42697325E00FB0C0C /* LoginController.swift in Sources */,
 				BDE912BE267CCCAE0005C459 /* config.swift in Sources */,
 				BDE912BA267CCAE80005C459 /* ProductSwiperService.swift in Sources */,
 				BDE9A4772691F0DD00F3A487 /* Headers+Extension.swift in Sources */,

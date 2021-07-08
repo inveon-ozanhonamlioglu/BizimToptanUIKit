@@ -32,7 +32,7 @@ class HomeController: UITableViewController {
         super.viewDidLoad()
         
         // set header
-        self.homeHeader()
+        self.setHomeHeader()
         
         IProductSwiperService.fetchProducts() // we want to fetch all swiper products when the app initializes
         setupUI()
